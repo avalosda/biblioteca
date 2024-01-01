@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>EJERCICIO DEL LIBRO</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container m-5">
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                       <th scope="col">id</th>
+                       <th scope="col">titulo</th>
+                       <th scope="col">autor</th>
+                       <th scope="col">ejemplar</th>
+                       <th scope="col">editorial</th>
+                    </tr>
+            
+                </thead>
+                <tbody th:each="libro : ${libros}">
+                    <tr>
+                        <th scope="row"th:text="${libro.isbn}"></th>
+                        <td th:text="${libro.titulo}"></td> 
+                        <td th:text="${libro.ejemplares.nombre}"></td>
+                        <td th: text="${libro.autor.nombre}"></td>
+                        <td th: text="${libro.editorial}"></td>
+                    </tr>
+                    
+                </tbody>
+                
+            </table>
+        </div>
+                   
+                   
+           
+            
+    </body>
+</html>

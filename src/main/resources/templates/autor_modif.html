@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>modificar</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container-flud m-5 contenedeor">
+        <form class="formulario" th:action="@{/autor/modificar/__${autor.id}__}"method="post">
+        
+            <input hidden th:value="${id}" name="id">
+            <div class=" form-grup my-3">
+                <label class="mb-2">INGRESE NUEVO NOMBRE</label>
+                <input th:value="${autor.nombre}"type="text"class=" form-control" name="nombre">
+            </div>
+            <button type="submit" class="btn btn-primary my-3 botones">actualizar</button>
+        </form>
+        </div>
+    </body>
+</html>
